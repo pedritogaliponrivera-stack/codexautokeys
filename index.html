@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#121214">
+<!-- DESCRIPTOR PROVISORIO: pendiente nombre definitivo del cliente -->
+<title>CODEX — Electrónica y Codificación Automotriz | Santa Cruz</title>
+<meta name="description" content="Electrónica y codificación automotriz en Santa Cruz: diagnóstico computarizado, ECU, llaves codificadas y cerrajería automotriz.">
+<meta property="og:title" content="CODEX — Electrónica y Codificación Automotriz">
+<meta property="og:description" content="¿Tu auto no arranca o perdiste tus llaves? Especialistas en electrónica automotriz en Santa Cruz. Cotizá por WhatsApp en segundos.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://codexautokeys.com/">
+<meta property="og:site_name" content="CODEX — Electrónica y Codificación Automotriz">
+<meta property="og:locale" content="es_BO">
+<meta property="og:image" content="https://codexautokeys.com/og-codex-cx.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="1200">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:alt" content="CODEX — Electrónica y codificación automotriz en Santa Cruz de la Sierra">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://codexautokeys.com/og-codex-cx.png">
+<link rel="canonical" href="https://codexautokeys.com/">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<!-- SEO local: datos estructurados schema.org -->
+<!-- TODO: confirmar que la dirección de texto (4to Anillo y Av. Alemania #4160) coincide con el pin de Maps que corrigió la dueña el 17/06/2026 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Locksmith", "AutoRepair"],
+  "name": "CODEX",
+  "description": "Centro de electrónica y codificación automotriz en Santa Cruz de la Sierra: diagnóstico computarizado, programación de módulos y ECU, llaves codificadas y cerrajería automotriz.",
+  "url": "https://codexautokeys.com/",
+  "image": "https://codexautokeys.com/og-codex-cx.png",
+  "telephone": "+59178080808",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "4to Anillo y Av. Alemania #4160",
+    "addressLocality": "Santa Cruz de la Sierra",
+    "addressRegion": "Santa Cruz",
+    "addressCountry": "BO"
+  },
+  "areaServed": "Santa Cruz de la Sierra",
+  "openingHours": ["Mo-Fr 08:00-12:00", "Mo-Fr 14:00-18:00", "Sa 09:00-13:00"],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+59178080115",
+    "contactType": "customer support",
+    "areaServed": "BO",
+    "availableLanguage": "es"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es una llave codificada?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Una llave codificada parece una llave normal, pero en su interior lleva un chip transponder con un código único para cada vehículo. Ese código se sincroniza con la centralita del auto: sin él, el motor no enciende aunque la llave gire. Por eso una copia común de cerrajería no funciona — necesita programación especializada." }
+    },
+    {
+      "@type": "Question",
+      "name": "Perdí todas las llaves de mi auto, ¿tiene solución?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí. La pérdida total es uno de nuestros servicios principales: generamos y programamos una llave nueva desde cero, aunque no exista ninguna copia. Escribinos por WhatsApp con la marca, modelo y año de tu vehículo y te cotizamos." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Trabajan con todas las marcas?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Trabajamos con vehículos de todas las marcas y procedencias. Smart keys, llaves con chip, controles remotos, inmovilizadores y módulos: si tu vehículo lo usa, lo programamos." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesito agendar turno o puedo pasar directo?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Para copias, diagnóstico y reparaciones te atendemos en el taller en nuestro horario (Lun a Vie 8:00 a 12:00 y 14:00 a 18:00, Sáb 9:00 a 13:00). Para ir directo a tu caso, escribinos antes por WhatsApp al 780 80 808 y coordinamos el mejor momento." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Abren el vehículo sin dañarlo?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí. Usamos técnicas de apertura profesional sin daños: ni la cerradura, ni la pintura, ni los burletes sufren. Es la diferencia entre un especialista y una solución de apuro." }
+    }
+  ]
+}
+</script>
+<script>
+/* Decide antes del primer paint si corre la intro (1 vez por sesión, nunca con reduced-motion) */
+(function(){
+  var h = document.documentElement;
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var vista = false; try{ vista = sessionStorage.getItem('codex_intro') === '1'; }catch(e){}
+  if (reduce || vista){ h.classList.add('sin-intro'); h.style.setProperty('--intro-espera','0s'); }
+  else { h.classList.add('con-intro','intro-activa'); h.style.setProperty('--intro-espera','.9s'); }
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<style>
+/* ============ SISTEMA ============ */
+:root{
+  --naranja:#F5611D;
+  --naranja-vivo:#FF6A2B;
+  --naranja-osc:#C44A12;
+  --negro:#121214;
+  --carbon:#1B1B1E;
+  --carbon-2:#232327;
+  --blanco:#FFFFFF;
+  --gris:#A8A8AD;
+  --gris-osc:#6E6E74;
+  --wa:#25D366;
+  --wa-osc:#1DA851;
+  --linea:rgba(255,255,255,.08);
+  --tinta-naranja:#2A1206;  /* texto AA sobre el naranja (5.5:1) */
+  --s1:8px; --s2:16px; --s3:24px; --s4:32px; --s5:48px; --s6:64px; --s7:96px;
+  --radio:10px;
+  --trans:180ms cubic-bezier(.4,0,.2,1);
+  --ease-fuerte:cubic-bezier(.23,1,.32,1);   /* ease-out con carácter, para entradas */
+  --ease-tapa:cubic-bezier(.32,.72,0,1);     /* curva tipo drawer iOS, para la cortina */
+  /* Textura plancha diamantada (SVG inline, sutil) */
+  --diamante:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.05' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M10 18 L22 6'/%3E%3Cpath d='M34 50 L46 38'/%3E%3Cpath d='M38 14 L46 22'/%3E%3Cpath d='M10 42 L18 50'/%3E%3C/g%3E%3C/svg%3E");
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
+body{
+  font-family:'Archivo',system-ui,sans-serif;
+  font-size:16px;line-height:1.6;
+  background:var(--negro);color:var(--blanco);
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+:focus-visible{outline:3px solid var(--naranja);outline-offset:3px;border-radius:4px}
+::selection{background:var(--naranja);color:var(--blanco)}
+
+.container{width:100%;max-width:1180px;margin-inline:auto;padding-inline:var(--s3)}
+.seccion{padding-block:var(--s7)}
+@media (max-width:720px){.seccion{padding-block:var(--s6)}}
+
+/* Tipografía display */
+.display{
+  font-weight:900;text-transform:uppercase;line-height:1.02;
+  letter-spacing:-.02em;
+}
+.kicker{
+  display:inline-flex;align-items:center;gap:10px;
+  font-weight:700;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--naranja);margin-bottom:var(--s2);
+}
+.kicker::before{content:"";width:28px;height:3px;background:var(--naranja);transform:skewX(-20deg)}
+.sub{color:var(--gris);max-width:62ch}
+
+/* ============ HEADER ============ */
+.header{
+  position:fixed;inset-inline:0;top:0;z-index:100;
+  background:rgba(18,18,20,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border-bottom:1px solid transparent;transition:border-color var(--trans);
+}
+.header.con-borde{border-bottom-color:var(--linea)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-img{height:30px;width:auto;display:block}
+.logo small{font-style:normal;font-weight:500;font-size:.55rem;letter-spacing:.08em;color:var(--gris);text-transform:none;max-width:14ch;line-height:1.15}
+.nav{display:flex;gap:var(--s3);align-items:center}
+.nav a{font-weight:500;font-size:.92rem;text-decoration:none;color:var(--gris);transition:color var(--trans)}
+.nav .link-nav{padding-block:11px;margin-block:-11px} /* target táctil ≥44px sin cambiar el layout */
+.nav a:hover{color:var(--blanco)}
+.btn-header{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--naranja);color:var(--blanco);text-decoration:none;
+  font-weight:700;font-size:.9rem;padding:10px 18px;border-radius:6px;min-height:44px;
+  transition:background var(--trans),transform var(--trans);
+}
+.btn-header:hover{background:var(--naranja-vivo);transform:translateY(-1px)}
+.btn-header:active{transform:translateY(0)}
+@media (max-width:880px){.nav .link-nav{display:none}}
+
+/* ============ BOTONES BASE ============ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-weight:700;font-size:1rem;text-decoration:none;text-align:center;
+  padding:16px 28px;border-radius:8px;
+  transition:background var(--trans),transform var(--trans),box-shadow var(--trans);
+}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.97)}
+.btn-naranja{background:var(--naranja);color:var(--blanco)}
+.btn-naranja:hover{background:var(--naranja-vivo);box-shadow:0 8px 24px rgba(245,97,29,.35)}
+.btn-fantasma{border:1.5px solid var(--linea);color:var(--blanco);background:rgba(255,255,255,.02)}
+.btn-fantasma:hover{border-color:var(--naranja);color:var(--naranja)}
+.btn-wa{background:var(--wa);color:#07210f}
+.btn-wa:hover{background:#2EE27A;box-shadow:0 8px 24px rgba(37,211,102,.3)}
+.btn-negro{background:var(--negro);color:var(--blanco)}
+.btn-negro:hover{background:#000;box-shadow:0 8px 24px rgba(0,0,0,.45)}
+.btn[disabled]{opacity:.4;cursor:not-allowed;transform:none!important;box-shadow:none!important}
+
+/* ============ HERO ============ */
+.hero{
+  position:relative;overflow:hidden;
+  padding-top:calc(72px + var(--s7));padding-bottom:var(--s7);
+  background:var(--negro) var(--diamante);
+}
+.hero::after{ /* corte diagonal naranja al borde derecho */
+  content:"";position:absolute;top:-10%;right:-14%;width:42%;height:130%;
+  background:linear-gradient(180deg,var(--naranja) 0%,var(--naranja-osc) 100%);
+  transform:skewX(-12deg);opacity:.95;z-index:0;
+}
+.hero::before{
+  content:"";position:absolute;top:-10%;right:26%;width:14px;height:130%;
+  background:var(--naranja);transform:skewX(-12deg);opacity:.35;z-index:0;
+}
+@media (max-width:980px){
+  .hero::after{right:-55%;opacity:.5}
+  .hero::before{display:none}
+}
+.hero-inner{position:relative;z-index:1;max-width:760px}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--carbon);border:1px solid var(--linea);border-radius:999px;
+  padding:8px 16px;font-size:.82rem;font-weight:500;color:var(--gris);margin-bottom:var(--s3);
+}
+.punto-vivo{position:relative;width:8px;height:8px;border-radius:50%;background:var(--wa)}
+.punto-vivo::after{content:"";position:absolute;inset:0;border-radius:50%;background:rgba(37,211,102,.6);animation:pulso 2s infinite}
+@keyframes pulso{0%{transform:scale(1);opacity:1}70%,100%{transform:scale(3.2);opacity:0}}
+.hero h1{font-size:clamp(2.5rem,6.4vw,4.6rem)}
+.hero h1 .tachado-naranja{color:var(--naranja);font-style:italic}
+.hero .sub{margin-top:var(--s3);font-size:1.1rem}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:var(--s2);margin-top:var(--s4)}
+.hero-datos{display:flex;flex-wrap:wrap;gap:var(--s4);margin-top:var(--s5);padding-top:var(--s4);border-top:1px solid var(--linea)}
+.dato strong{display:block;font-weight:900;font-size:1.5rem;font-style:italic}
+.dato span{font-size:.85rem;color:var(--gris)}
+
+/* ============ FRANJA EMERGENCIA ============ */
+.emergencia{
+  position:relative;background:var(--naranja);
+  color:var(--blanco);clip-path:polygon(0 28px,100% 0,100% calc(100% - 28px),0 100%);
+  padding-block:calc(var(--s7) + 28px);
+}
+.emergencia .container{display:grid;grid-template-columns:1.2fr 1fr;gap:var(--s5);align-items:center}
+@media (max-width:880px){.emergencia .container{grid-template-columns:1fr}}
+.emergencia h2{font-size:clamp(1.9rem,4.5vw,3rem)}
+.emergencia .kicker{color:var(--tinta-naranja)}
+.emergencia .kicker::before{background:var(--tinta-naranja)}
+.emergencia p{margin-top:var(--s2);color:var(--tinta-naranja);max-width:50ch}
+.emergencia-acciones{display:flex;flex-direction:column;gap:var(--s2)}
+.emergencia-acciones .btn{padding:20px 28px;font-size:1.05rem}
+.nota-emergencia{font-size:.85rem;font-weight:500;color:var(--tinta-naranja);text-align:center}
+
+/* ============ DIAGNÓSTICO ============ */
+.sintomas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s2);margin-top:var(--s4)}
+@media (max-width:880px){.sintomas-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.sintomas-grid{grid-template-columns:1fr}}
+.sintoma{
+  display:flex;flex-direction:column;align-items:flex-start;gap:10px;text-align:left;
+  background:var(--carbon);border:1.5px solid var(--linea);border-radius:var(--radio);
+  padding:var(--s3);transition:border-color var(--trans),background var(--trans),transform var(--trans);
+}
+.sintoma:hover{border-color:var(--naranja);transform:translateY(-2px)}
+.sintoma.activo{border-color:var(--naranja);background:var(--carbon-2)}
+.sintoma .icono{font-size:1.5rem;line-height:1}
+.sintoma .titulo-sintoma{font-weight:700;font-size:1.02rem;line-height:1.3}
+.panel-diagnostico{
+  margin-top:var(--s3);background:var(--carbon-2) var(--diamante);
+  border-left:4px solid var(--naranja);border-radius:var(--radio);
+  padding:var(--s4);display:none;
+}
+.panel-diagnostico.visible{display:block;animation:aparecer .25s ease-out}
+@keyframes aparecer{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.panel-diagnostico .etiqueta{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--naranja)}
+.panel-diagnostico h3{font-weight:900;font-size:1.4rem;text-transform:uppercase;font-style:italic;margin-top:6px}
+.panel-diagnostico p{color:var(--gris);margin-top:var(--s1);max-width:60ch}
+.panel-diagnostico .btn{margin-top:var(--s3)}
+
+/* ============ SERVICIOS ============ */
+.servicios{background:var(--carbon)}
+.bloques{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s3);margin-top:var(--s5)}
+@media (max-width:980px){.bloques{grid-template-columns:1fr 1fr}}
+@media (max-width:680px){.bloques{grid-template-columns:1fr}}
+.bloque{
+  background:var(--negro);border:1px solid var(--linea);border-radius:var(--radio);
+  padding:var(--s4);display:flex;flex-direction:column;gap:var(--s2);
+  transition:border-color var(--trans),transform var(--trans);
+}
+.bloque:hover{border-color:rgba(245,97,29,.5);transform:translateY(-3px)}
+.bloque-destacado{
+  grid-column:1/-1;background:var(--negro) var(--diamante);
+  border:1.5px solid rgba(245,97,29,.55);
+  display:grid;grid-template-columns:1.1fr 1.4fr;gap:var(--s5);align-items:center;
+}
+@media (max-width:880px){.bloque-destacado{grid-template-columns:1fr}}
+.num-bloque{font-weight:900;font-style:italic;font-size:.9rem;color:var(--naranja);letter-spacing:.1em}
+.bloque h3{font-weight:900;text-transform:uppercase;font-size:1.3rem;line-height:1.15}
+.bloque-destacado h3{font-size:clamp(1.6rem,3vw,2.2rem)}
+.bloque .desc-bloque{color:var(--gris);font-size:.95rem}
+.lista-servicios{list-style:none;display:flex;flex-direction:column;gap:10px}
+.lista-servicios li{
+  position:relative;padding-left:22px;font-size:.95rem;color:#D6D6DA;
+}
+.lista-servicios li::before{
+  content:"";position:absolute;left:0;top:9px;width:10px;height:3px;
+  background:var(--naranja);transform:skewX(-20deg);
+}
+.bloque .cta-bloque{
+  margin-top:auto;align-self:flex-start;
+  font-weight:700;font-size:.9rem;color:var(--naranja);text-decoration:none;
+  display:inline-flex;align-items:center;gap:6px;transition:gap var(--trans),color var(--trans);
+}
+.bloque .cta-bloque:hover{gap:10px;color:var(--naranja-vivo)}
+
+/* ============ COTIZADOR ============ */
+.cotizador-marco{
+  margin-top:var(--s5);background:var(--carbon);border:1px solid var(--linea);
+  border-radius:14px;overflow:hidden;
+}
+.cotizador-barra{height:5px;background:var(--carbon-2)}
+.cotizador-progreso{height:100%;width:33%;background:var(--naranja);transition:width .3s var(--ease-fuerte)}
+.cotizador-cuerpo{padding:var(--s4)}
+.paso-etiqueta{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--naranja)}
+.cotizador-cuerpo h3{font-weight:900;text-transform:uppercase;font-size:1.35rem;margin-top:6px;margin-bottom:var(--s3)}
+.opciones{display:flex;flex-wrap:wrap;gap:10px}
+.opcion{
+  border:1.5px solid var(--linea);border-radius:999px;background:var(--negro);
+  padding:11px 20px;font-weight:500;font-size:.95rem;color:#D6D6DA;
+  transition:border-color var(--trans),background var(--trans),color var(--trans);
+}
+.opcion:hover{border-color:var(--naranja)}
+.opcion.elegida{border-color:var(--naranja);background:rgba(245,97,29,.12);color:var(--blanco);font-weight:700}
+.campo-otra{margin-top:var(--s2);display:none}
+.campo-otra.visible{display:block}
+.campo-otra input{
+  width:100%;max-width:340px;background:var(--negro);border:1.5px solid var(--linea);
+  border-radius:8px;padding:12px 16px;color:var(--blanco);font:inherit;
+  transition:border-color var(--trans);
+}
+.campo-otra input:focus{outline:none;border-color:var(--naranja)}
+.campo-otra input::placeholder{color:var(--gris-osc)}
+.cotizador-pie{display:flex;justify-content:space-between;align-items:center;gap:var(--s2);margin-top:var(--s4);flex-wrap:wrap}
+.btn-volver{color:var(--gris);font-weight:500;display:inline-flex;align-items:center;gap:6px;transition:color var(--trans)}
+.btn-volver:hover{color:var(--blanco)}
+.resumen{
+  background:var(--negro);border:1px dashed rgba(245,97,29,.5);border-radius:var(--radio);
+  padding:var(--s3);margin-bottom:var(--s3);
+}
+.resumen dt{font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gris)}
+.resumen dd{font-weight:700;font-size:1.05rem;margin-bottom:var(--s2)}
+.resumen dd:last-child{margin-bottom:0}
+.nota-cotizador{font-size:.85rem;color:var(--gris);margin-top:var(--s2)}
+
+/* ============ POR QUÉ CODEX ============ */
+.porque{background:var(--carbon) var(--diamante)}
+.razones{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--linea);margin-top:var(--s5);border:1px solid var(--linea)}
+@media (max-width:720px){.razones{grid-template-columns:1fr}}
+.razon{background:var(--carbon);padding:var(--s4)}
+.razon .numero{font-weight:900;font-style:italic;font-size:2.6rem;color:var(--naranja);line-height:1}
+.razon h3{font-weight:700;font-size:1.1rem;margin-top:var(--s2);text-transform:uppercase}
+.razon p{color:var(--gris);font-size:.95rem;margin-top:var(--s1)}
+
+/* ============ FAQ ============ */
+.faq-lista{margin-top:var(--s4);display:flex;flex-direction:column;gap:var(--s2)}
+.faq-item{
+  background:var(--carbon);border:1px solid var(--linea);border-radius:var(--radio);
+  transition:border-color var(--trans);
+}
+.faq-item[open]{border-color:rgba(245,97,29,.5)}
+.faq-item summary{
+  list-style:none;display:flex;justify-content:space-between;align-items:center;gap:var(--s2);
+  padding:var(--s3);font-weight:700;cursor:pointer;
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{
+  content:"+";font-weight:900;font-size:1.4rem;color:var(--naranja);
+  transition:transform var(--trans);flex-shrink:0;
+}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item .faq-cuerpo{padding:0 var(--s3) var(--s3);color:var(--gris);max-width:70ch}
+
+/* ============ CONTACTO ============ */
+.contacto-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:var(--s5);margin-top:var(--s5);align-items:start}
+@media (max-width:880px){.contacto-grid{grid-template-columns:1fr}}
+.dato-contacto{padding-block:var(--s3);border-bottom:1px solid var(--linea)}
+.dato-contacto:first-child{padding-top:0}
+.dato-contacto .etiqueta{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--naranja)}
+.dato-contacto p{font-weight:700;font-size:1.15rem;margin-top:4px}
+.dato-contacto small{color:var(--gris);font-weight:400;display:block;margin-top:2px;font-size:.88rem}
+.dato-contacto a{text-decoration:none;transition:color var(--trans)}
+.dato-contacto a:hover{color:var(--naranja)}
+.mapa{
+  border:1px solid var(--linea);border-radius:var(--radio);overflow:hidden;
+  aspect-ratio:4/3;background:var(--carbon);
+}
+.mapa iframe{width:100%;height:100%;border:0;filter:grayscale(.4) contrast(1.05)}
+.contacto .btn-wa{margin-top:var(--s3)}
+
+/* ============ FOOTER ============ */
+.footer{border-top:1px solid var(--linea);padding-block:var(--s5);background:var(--negro)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:var(--s3);flex-wrap:wrap}
+.footer p{color:var(--gris);font-size:.85rem}
+.footer .logo-img{height:26px}
+
+/* ============ FLOTANTE WHATSAPP ============ */
+.wa-flotante{
+  position:fixed;right:20px;bottom:20px;z-index:90;
+  width:60px;height:60px;border-radius:50%;
+  background:var(--wa);display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 28px rgba(37,211,102,.4);
+  transition:transform var(--trans),box-shadow var(--trans);
+}
+.wa-flotante:hover{transform:scale(1.08);box-shadow:0 10px 34px rgba(37,211,102,.55)}
+.wa-flotante svg{width:30px;height:30px;fill:#07210f}
+
+/* ============ REVEAL ON SCROLL ============ */
+.revelar{opacity:0;transform:translateY(22px);transition:opacity .55s var(--ease-fuerte),transform .55s var(--ease-fuerte)}
+.revelar.visto{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.revelar{opacity:1;transform:none}}
+
+/* ============ REVEAL ESCALONADO (grillas) ============ */
+/* Usa la propiedad `translate` (independiente de transform) para no pisar los hover */
+.escalonado>*{opacity:0;translate:0 16px;transition:opacity .55s var(--ease-fuerte),translate .55s var(--ease-fuerte)}
+.escalonado.visto>*{opacity:1;translate:0 0}
+@media (prefers-reduced-motion:reduce){.escalonado>*{opacity:1;translate:0 0}}
+
+/* ============ INTRO DE MARCA (1 vez por sesión) ============ */
+html.intro-activa{overflow:hidden}
+html.sin-intro .intro{display:none}
+.intro{
+  position:fixed;inset:0;z-index:300;
+  background:var(--negro) var(--diamante);
+  display:flex;align-items:center;justify-content:center;
+}
+html.con-intro .intro{animation:intro-salida .6s var(--ease-tapa) 1.05s forwards}
+.intro-marca{display:flex;flex-direction:column;align-items:center;gap:16px}
+.intro-logo{
+  height:clamp(54px,12vw,104px);width:auto;display:block;
+  clip-path:inset(0 100% 0 0);
+  animation:intro-wipe .55s var(--ease-fuerte) .15s forwards;
+}
+.intro-sub{
+  font-size:.72rem;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--gris);
+  text-align:center;max-width:86vw;
+  opacity:0;animation:intro-fade .45s var(--ease-fuerte) .55s forwards;
+}
+.intro-barra{
+  width:min(300px,58vw);height:4px;background:var(--naranja);
+  transform:scaleX(0) skewX(-20deg);transform-origin:left center;
+  animation:intro-barra .5s var(--ease-fuerte) .42s forwards;
+}
+@keyframes intro-wipe{to{clip-path:inset(0 0 0 0)}}
+@keyframes intro-fade{to{opacity:1}}
+@keyframes intro-barra{to{transform:scaleX(1) skewX(-20deg)}}
+@keyframes intro-salida{to{transform:translateY(-100%)}}
+
+/* ============ CARGA ESCALONADA DEL HERO ============ */
+.carga{opacity:0;animation:subir .65s var(--ease-fuerte) both;animation-delay:calc(var(--intro-espera,0s) + var(--d,0s))}
+@keyframes subir{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+html.con-intro .header{animation:bajar .55s var(--ease-fuerte) var(--intro-espera,0s) both}
+@keyframes bajar{from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:none}}
+.hero::after{animation:plancha .85s var(--ease-tapa) calc(var(--intro-espera,0s) - .15s) both}
+@keyframes plancha{from{opacity:0;transform:skewX(-12deg) translateX(16%)}to{opacity:.95;transform:skewX(-12deg) translateX(0)}}
+@media (prefers-reduced-motion:reduce){
+  .carga{opacity:1;animation:none}
+  .hero::after{animation:none}
+  html.con-intro .header{animation:none}
+}
+
+/* ============ HOVER SOLO EN PUNTEROS REALES ============ */
+@media (hover:none){
+  .btn:hover{transform:none;box-shadow:none}
+  .sintoma:hover,.bloque:hover{transform:none}
+  .wa-flotante:hover{transform:none;box-shadow:0 8px 28px rgba(37,211,102,.4)}
+  .cta-bloque:hover{gap:6px}
+}
+
+/* ============ AUDIT MÓVIL: íconos, targets táctiles y safe areas ============ */
+a,button{-webkit-tap-highlight-color:transparent}
+.ico{width:1.25em;height:1.25em;stroke:currentColor;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.ico-fill{fill:currentColor;stroke:none}
+.btn .ico{width:1.15em;height:1.15em}
+.sintoma .ico{width:26px;height:26px;color:var(--naranja)}
+.bloque h3{display:flex;align-items:center;gap:10px}
+.bloque h3 .ico{color:var(--naranja);width:22px;height:22px}
+.dato-contacto .etiqueta{display:inline-flex;align-items:center;gap:7px}
+.dato-contacto .etiqueta .ico{width:15px;height:15px}
+.opcion{min-height:44px}
+.btn-volver{padding:12px 10px;margin-block:-8px;min-height:44px}
+.cta-bloque{min-height:44px;padding-block:8px;margin-block:-8px}
+.link-mapa{display:inline-flex;align-items:center;gap:8px;margin-top:var(--s2);min-height:44px;font-weight:700;font-size:.92rem;color:var(--naranja);text-decoration:none;transition:color var(--trans)}
+.link-mapa:hover{color:var(--naranja-vivo)}
+.wa-flotante{right:max(20px,env(safe-area-inset-right));bottom:max(20px,env(safe-area-inset-bottom));color:#07210f}
+.wa-flotante svg{fill:currentColor}
+.footer{padding-bottom:max(var(--s5),env(safe-area-inset-bottom))}
+@media (max-width:560px){
+  .hero{padding-top:calc(72px + var(--s5))}
+  .hero-ctas .btn{flex:1 1 100%}
+  .hero-datos{gap:var(--s3)}
+  .cotizador-cuerpo{padding:var(--s3)}
+  .cotizador-pie .btn{flex:1 1 auto}
+  .emergencia-acciones .btn{padding:18px 20px}
+}
+@media (max-width:480px){
+  .logo small{display:none}
+}
+
+/* ============ POLISH FINAL ============ */
+.titulo-seccion{font-size:clamp(1.9rem,4.5vw,3rem)}
+.sub-seccion{margin-top:var(--s2)}
+.display,h2{text-wrap:balance}
+html{scrollbar-color:#36363c var(--negro)}
+.opcion{transition:border-color var(--trans),background var(--trans),color var(--trans),transform 120ms var(--ease-fuerte)}
+.opcion:active{transform:scale(.96)}
+.sintoma:active{transform:translateY(0) scale(.985)}
+.faq-item:hover{border-color:rgba(245,97,29,.35)}
+.faq-item[open]:hover{border-color:rgba(245,97,29,.55)}
+.wa-flotante{animation:pop-wa .45s var(--ease-fuerte) calc(var(--intro-espera,0s) + .55s) backwards}
+@keyframes pop-wa{from{opacity:0;transform:scale(.6)}}
+.paso-anim{animation:aparecer .28s var(--ease-fuerte)}
+/* Apertura animada del FAQ — solo navegadores que lo soportan, el resto abre normal */
+@supports (interpolate-size: allow-keywords){
+  :root{interpolate-size:allow-keywords}
+  .faq-item::details-content{height:0;overflow:clip;transition:height .32s var(--ease-fuerte),content-visibility .32s allow-discrete}
+  .faq-item[open]::details-content{height:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ SPRITE DE ÍCONOS ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="i-llave" viewBox="0 0 24 24"><path d="m21 2-9.6 9.6"/><circle cx="7.5" cy="15.5" r="5"/><path d="m15.5 7.5 3 3L22 7l-3-3"/></symbol>
+<symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+<symbol id="i-bateria" viewBox="0 0 24 24"><rect width="16" height="10" x="2" y="7" rx="2" ry="2"/><line x1="22" x2="22" y1="11" y2="13"/><line x1="6" x2="6" y1="10" y2="14"/></symbol>
+<symbol id="i-alerta" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+<symbol id="i-copia" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+<symbol id="i-cpu" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v2"/><path d="M15 2v2"/><path d="M9 20v2"/><path d="M15 20v2"/><path d="M2 9h2"/><path d="M2 15h2"/><path d="M20 9h2"/><path d="M20 15h2"/></symbol>
+<symbol id="i-telefono" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+<symbol id="i-auto" viewBox="0 0 24 24"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+<symbol id="i-reloj" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+<symbol id="i-wa" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.87 9.87 0 0 0 4.74 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29z"/></symbol>
+</defs></svg>
+
+<!-- ============ INTRO DE MARCA ============ -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-marca">
+    <img class="intro-logo" src="logo-codex.png" alt="CODEX" width="1629" height="280">
+    <span class="intro-barra"></span>
+    <span class="intro-sub">Electrónica y codificación automotriz</span>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="#inicio" class="logo" aria-label="CODEX, inicio"><img class="logo-img" src="logo-codex.png" alt="" width="1629" height="280"><small>Electrónica y codificación automotriz</small></a>
+    <nav class="nav" aria-label="Navegación principal">
+      <a class="link-nav" href="#servicios">Servicios</a>
+      <a class="link-nav" href="#cotizador">Cotizar</a>
+      <a class="link-nav" href="#contacto">Ubicación</a>
+      <a class="btn-header" href="#" data-wa="Hola CODEX, quiero hacer una consulta."><svg class="ico ico-fill" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="container">
+    <div class="hero-inner">
+      <span class="hero-badge carga" style="--d:0s"><span class="punto-vivo" aria-hidden="true"></span> Electrónica automotriz · Santa Cruz de la Sierra</span>
+      <h1 class="display carga" style="--d:.08s">Tu vehículo tiene un problema.<br><span class="tachado-naranja">Nosotros, la solución.</span></h1>
+      <p class="sub carga" style="--d:.16s">Especialistas en <strong>electrónica y electricidad automotriz, llaves codificadas y smart keys</strong>. Resolvemos lo que el taller común no puede: módulos, inmovilizadores, ECU, pérdida total de llaves y más.</p>
+      <div class="hero-ctas carga" style="--d:.26s">
+        <a class="btn btn-naranja" href="#cotizador">Cotizar mi llave</a>
+        <a class="btn btn-fantasma" href="#emergencia"><svg class="ico" aria-hidden="true"><use href="#i-alerta"/></svg>Necesito una solución</a>
+      </div>
+      <div class="hero-datos carga" style="--d:.36s">
+        <div class="dato"><strong>Express</strong><span>Codificación de llaves</span></div>
+        <div class="dato"><strong>Sin daños</strong><span>Apertura profesional de vehículos</span></div>
+        <div class="dato"><strong>Multimarca</strong><span>Todas las marcas y modelos</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EMERGENCIA ============ -->
+<section class="emergencia" id="emergencia">
+  <div class="container">
+    <div class="revelar">
+      <span class="kicker">Soluciones</span>
+      <h2 class="display">¿Necesitás una solución?</h2>
+      <p><strong>Programación de llaves, pérdida total o problemas de arranque.</strong> Y si perdiste todas las llaves o tu vehículo no puede moverse, <strong>vamos hasta donde estés</strong>. Nuestro equipo está listo para ayudarte con soluciones rápidas y seguras.</p>
+    </div>
+    <div class="emergencia-acciones revelar">
+      <a class="btn btn-negro" href="tel:+59178080115"><svg class="ico" aria-hidden="true"><use href="#i-telefono"/></svg>Llamar a emergencias — 780 80 115</a>
+      <a class="btn btn-wa" href="#" data-wa="Hola CODEX, necesito una solución para mi vehículo. Les cuento mi caso:"><svg class="ico ico-fill" aria-hidden="true"><use href="#i-wa"/></svg>Escribinos por WhatsApp</a>
+      <span class="nota-emergencia">El botón abre WhatsApp con el mensaje listo.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DIAGNÓSTICO ============ -->
+<section class="seccion" id="diagnostico">
+  <div class="container">
+    <div class="revelar">
+      <span class="kicker">Diagnóstico rápido</span>
+      <h2 class="display titulo-seccion">¿Qué le pasa a tu auto?</h2>
+      <p class="sub sub-seccion">Elegí el síntoma y te decimos qué servicio lo resuelve.</p>
+    </div>
+    <div class="sintomas-grid escalonado" role="group" aria-label="Seleccioná un síntoma">
+      <button class="sintoma" data-sintoma="llaves"><svg class="ico" aria-hidden="true"><use href="#i-llave"/></svg><span class="titulo-sintoma">Perdí mis llaves o quedaron adentro</span></button>
+      <button class="sintoma" data-sintoma="arranque"><svg class="ico" aria-hidden="true"><use href="#i-zap"/></svg><span class="titulo-sintoma">Mi auto no arranca</span></button>
+      <button class="sintoma" data-sintoma="bateria"><svg class="ico" aria-hidden="true"><use href="#i-bateria"/></svg><span class="titulo-sintoma">La batería se descarga sola</span></button>
+      <button class="sintoma" data-sintoma="testigo"><svg class="ico" aria-hidden="true"><use href="#i-alerta"/></svg><span class="titulo-sintoma">Luz de airbag, ABS u otro testigo encendido</span></button>
+      <button class="sintoma" data-sintoma="copia"><svg class="ico" aria-hidden="true"><use href="#i-copia"/></svg><span class="titulo-sintoma">Necesito una copia de llave con chip</span></button>
+      <button class="sintoma" data-sintoma="electronica"><svg class="ico" aria-hidden="true"><use href="#i-cpu"/></svg><span class="titulo-sintoma">Falla electrónica o de módulos</span></button>
+    </div>
+    <div class="panel-diagnostico" id="panel-diagnostico" role="region" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- ============ SERVICIOS ============ -->
+<section class="servicios seccion" id="servicios">
+  <div class="container">
+    <div class="revelar">
+      <span class="kicker">Servicios</span>
+      <h2 class="display titulo-seccion">Especialistas de punta a punta</h2>
+    </div>
+    <div class="bloques escalonado">
+      <article class="bloque">
+        <span class="num-bloque">01</span>
+        <h3><svg class="ico" aria-hidden="true"><use href="#i-cpu"/></svg>Electrónica y Diagnóstico Avanzado</h3>
+        <ul class="lista-servicios">
+          <li>Escaneo computarizado</li>
+          <li>Programación y codificación de módulos</li>
+          <li>Reparación de ECU / ECM</li>
+          <li>Diagnóstico de ABS, Airbag, TPMS</li>
+          <li>Adaptaciones y configuraciones electrónicas</li>
+          <li>Reseteo y calibración de sistemas</li>
+        </ul>
+        <a class="cta-bloque" href="#" data-wa="Hola CODEX, quiero consultar por Electrónica y Diagnóstico Avanzado.">Consultar por WhatsApp →</a>
+      </article>
+      <article class="bloque">
+        <span class="num-bloque">02</span>
+        <h3><svg class="ico" aria-hidden="true"><use href="#i-auto"/></svg>Sistemas Especiales</h3>
+        <ul class="lista-servicios">
+          <li>Diagnóstico y reparación de sistemas ADAS</li>
+          <li>Programación de tableros e inmovilizadores</li>
+          <li>Recuperación de códigos de radio</li>
+          <li>Configuración de funciones y accesorios</li>
+          <li>Ajuste de odómetros</li>
+          <li>Enlace de módulos</li>
+        </ul>
+        <a class="cta-bloque" href="#" data-wa="Hola CODEX, quiero consultar por Sistemas Especiales (ADAS, tableros, módulos).">Consultar por WhatsApp →</a>
+      </article>
+      <article class="bloque">
+        <span class="num-bloque">03</span>
+        <h3><svg class="ico" aria-hidden="true"><use href="#i-zap"/></svg>Electricidad Automotriz</h3>
+        <ul class="lista-servicios">
+          <li>Diagnóstico y reparación de fallas eléctricas</li>
+          <li>Consumo de corriente (descarga de batería)</li>
+          <li>Arranques y alternadores</li>
+          <li>Cableado y cortocircuitos</li>
+          <li>Luces, sensores y módulos electrónicos</li>
+          <li>Cierre centralizado y sistemas de confort</li>
+        </ul>
+        <a class="cta-bloque" href="#" data-wa="Hola CODEX, quiero consultar por un servicio de Electricidad Automotriz.">Consultar por WhatsApp →</a>
+      </article>
+      <article class="bloque bloque-destacado">
+        <div>
+          <span class="num-bloque">04 — EL CORAZÓN DE CODEX</span>
+          <h3>Llaves &amp; Seguridad</h3>
+          <p class="desc-bloque" style="margin-top:var(--s2)">Codificación de llaves express: nuestra especialidad desde el día uno. Tecnología de programación para todas las marcas, con respuesta inmediata.</p>
+          <a class="btn btn-naranja" style="margin-top:var(--s3)" href="#cotizador">Cotizar mi llave ahora</a>
+        </div>
+        <ul class="lista-servicios">
+          <li>Copia de llaves codificadas</li>
+          <li>Programación de llaves inteligentes (Smart Key)</li>
+          <li>Pérdida total de llaves</li>
+          <li>Duplicados con chip e inmovilizador</li>
+          <li>Reparación de controles remotos</li>
+          <li>Apertura de vehículos sin daños</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COTIZADOR ============ -->
+<section class="seccion" id="cotizador">
+  <div class="container">
+    <div class="revelar">
+      <span class="kicker">Cotizador express</span>
+      <h2 class="display titulo-seccion">Cotizá tu llave en 30 segundos</h2>
+      <p class="sub sub-seccion">Tres pasos y tu consulta llega a nuestro WhatsApp con todos los datos. Sin formularios, sin esperas.</p>
+    </div>
+    <div class="cotizador-marco revelar">
+      <div class="cotizador-barra"><div class="cotizador-progreso" id="cotizador-progreso"></div></div>
+      <div class="cotizador-cuerpo" id="cotizador-cuerpo">
+        <!-- contenido inyectado por JS -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ POR QUÉ CODEX ============ -->
+<section class="porque seccion" id="porque">
+  <div class="container">
+    <div class="revelar">
+      <span class="kicker">Por qué CODEX</span>
+      <h2 class="display titulo-seccion">Calidad &amp; seguridad<br>en cada llave</h2>
+    </div>
+    <div class="razones escalonado">
+      <div class="razon">
+        <span class="numero">01</span>
+        <h3>Especialistas, no improvisados</h3>
+        <p>Electrónica automotriz es lo único que hacemos. Equipos de programación y diagnóstico de nivel profesional para todas las marcas.</p>
+      </div>
+      <div class="razon">
+        <span class="numero">02</span>
+        <h3>Respuesta inmediata</h3>
+        <p>Codificación de llaves <em>express</em>: lo llevamos en el nombre. Diagnóstico ágil y soluciones que van directo a la causa.</p>
+      </div>
+      <div class="razon">
+        <span class="numero">03</span>
+        <h3>Apertura sin daños</h3>
+        <p>Técnicas profesionales que no dañan tu vehículo. Tu auto queda como estaba, pero con vos adentro.</p>
+      </div>
+      <div class="razon">
+        <span class="numero">04</span>
+        <h3>Taller establecido en Santa Cruz</h3>
+        <p>Local físico en 4to Anillo y Av. Alemania. Sabés dónde encontrarnos antes, durante y después del servicio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="seccion" id="faq">
+  <div class="container">
+    <div class="revelar">
+      <span class="kicker">Preguntas frecuentes</span>
+      <h2 class="display titulo-seccion">Lo que siempre nos preguntan</h2>
+    </div>
+    <div class="faq-lista escalonado">
+      <details class="faq-item">
+        <summary>¿Qué es una llave codificada?</summary>
+        <div class="faq-cuerpo">Una llave codificada parece una llave normal, pero en su interior lleva un <strong>chip transponder</strong> con un código único para cada vehículo. Ese código se sincroniza con la centralita del auto: sin él, el motor no enciende aunque la llave gire. Por eso una copia común de cerrajería no funciona — necesita programación especializada.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Perdí todas las llaves de mi auto, ¿tiene solución?</summary>
+        <div class="faq-cuerpo">Sí. La <strong>pérdida total</strong> es uno de nuestros servicios principales: generamos y programamos una llave nueva desde cero, aunque no exista ninguna copia. Escribinos por WhatsApp con la marca, modelo y año de tu vehículo y te cotizamos.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Trabajan con todas las marcas?</summary>
+        <div class="faq-cuerpo">Trabajamos con vehículos de todas las marcas y procedencias. Smart keys, llaves con chip, controles remotos, inmovilizadores y módulos: si tu vehículo lo usa, lo programamos.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Necesito agendar turno o puedo pasar directo?</summary>
+        <div class="faq-cuerpo">Para copias, diagnóstico y reparaciones te atendemos en el taller en nuestro horario (<strong>Lun a Vie 8:00–12:00 y 14:00–18:00, Sáb 9:00–13:00</strong>). Para ir directo a tu caso, escribinos antes por WhatsApp al 780 80 808 y coordinamos el mejor momento.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Abren el vehículo sin dañarlo?</summary>
+        <div class="faq-cuerpo">Sí. Usamos técnicas de <strong>apertura profesional sin daños</strong>: ni la cerradura, ni la pintura, ni los burletes sufren. Es la diferencia entre un especialista y una solución de apuro.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="seccion contacto" id="contacto" style="padding-bottom:var(--s6)">
+  <div class="container">
+    <div class="revelar">
+      <span class="kicker">Encontranos</span>
+      <h2 class="display titulo-seccion">Estamos donde nos necesitás</h2>
+    </div>
+    <div class="contacto-grid">
+      <div class="revelar">
+        <div class="dato-contacto">
+          <span class="etiqueta"><svg class="ico" aria-hidden="true"><use href="#i-pin"/></svg>Dirección</span>
+          <p>4to Anillo y Av. Alemania #4160</p>
+          <small>Santa Cruz de la Sierra, Bolivia</small>
+        </div>
+        <div class="dato-contacto">
+          <span class="etiqueta"><svg class="ico ico-fill" aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp / Consultas</span>
+          <p><a href="#" data-wa="Hola CODEX, quiero hacer una consulta.">780 80 808</a></p>
+          <small>Cotizaciones, turnos y consultas generales</small>
+        </div>
+        <div class="dato-contacto">
+          <span class="etiqueta"><svg class="ico" aria-hidden="true"><use href="#i-telefono"/></svg>Emergencias y pérdida total</span>
+          <p><a href="tel:+59178080115">780 80 115</a></p>
+          <small>Si tu vehículo no puede moverse, vamos hasta donde estés</small>
+        </div>
+        <div class="dato-contacto">
+          <span class="etiqueta"><svg class="ico" aria-hidden="true"><use href="#i-reloj"/></svg>Horario del taller</span>
+          <p>Lun a Vie: 8:00–12:00 y 14:00–18:00 · Sáb: 9:00–13:00 · Dom: cerrado</p>
+          <small>Los horarios pueden variar — fuera de horario, escribinos por WhatsApp</small>
+        </div>
+        <a class="btn btn-wa" href="#" data-wa="Hola CODEX, quiero hacer una consulta."><svg class="ico ico-fill" aria-hidden="true"><use href="#i-wa"/></svg>Escribinos por WhatsApp</a>
+      </div>
+      <div class="revelar"><div class="mapa">
+        <iframe title="Ubicación de CODEX en Google Maps" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+          src="https://www.google.com/maps?q=-17.7510456,-63.1640235&z=17&output=embed"></iframe>
+        </div>
+        <a class="link-mapa" target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/YdpSCKGvoxeyZrjU6">Abrir en Google Maps <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <a href="#inicio" class="logo" aria-label="CODEX, volver arriba"><img class="logo-img" src="logo-codex.png" alt="" width="1629" height="280"></a>
+    <p>© <span id="anio"></span> CODEX — Electrónica y Codificación Automotriz · Santa Cruz de la Sierra, Bolivia</p>
+  </div>
+</footer>
+
+<!-- ============ WHATSAPP FLOTANTE ============ -->
+<a class="wa-flotante" href="#" data-wa="Hola CODEX, quiero hacer una consulta." aria-label="Abrir WhatsApp de CODEX">
+  <svg aria-hidden="true"><use href="#i-wa"/></svg>
+</a>
+
+<script>
+// ============ CONFIGURACIÓN ============
+const WA_NUMERO = '59178080808'; // WhatsApp general (servicios y cotizaciones)
+const waLink = (msg) => 'https://wa.me/' + WA_NUMERO + '?text=' + encodeURIComponent(msg);
+// Escape HTML para todo texto del usuario que se inserta al DOM
+const esc = (s) => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+// Enlaces WhatsApp pre-armados (todo elemento con data-wa)
+document.querySelectorAll('[data-wa]').forEach(el => {
+  el.setAttribute('href', waLink(el.dataset.wa));
+  el.setAttribute('target', '_blank');
+  el.setAttribute('rel', 'noopener noreferrer');
+});
+
+// ============ HEADER: borde al scrollear ============
+const header = document.getElementById('header');
+addEventListener('scroll', () => header.classList.toggle('con-borde', scrollY > 12), {passive:true});
+
+// ============ AÑO FOOTER ============
+document.getElementById('anio').textContent = new Date().getFullYear();
+
+// ============ REVEAL ON SCROLL (simple + escalonado) ============
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target;
+    if (el.classList.contains('escalonado')){
+      const hijos = [...el.children];
+      hijos.forEach((h,i) => h.style.transitionDelay = (i*60) + 'ms');
+      // limpiar el delay al terminar, para no retrasar los hovers posteriores
+      setTimeout(() => hijos.forEach(h => h.style.transitionDelay = ''), hijos.length*60 + 650);
+    }
+    el.classList.add('visto');
+    io.unobserve(el);
+  });
+}, {threshold:.12});
+document.querySelectorAll('.revelar, .escalonado').forEach(el => io.observe(el));
+
+// ============ INTRO: cierre y memoria de sesión ============
+const intro = document.getElementById('intro');
+if (document.documentElement.classList.contains('con-intro')){
+  const cerrarIntro = () => {
+    intro.remove();
+    document.documentElement.classList.remove('intro-activa');
+    try{ sessionStorage.setItem('codex_intro','1'); }catch(e){}
+  };
+  intro.addEventListener('animationend', e => { if (e.animationName === 'intro-salida') cerrarIntro(); });
+  setTimeout(cerrarIntro, 2400); // respaldo por si el evento no dispara
+} else {
+  intro.remove();
+}
+
+// ============ DIAGNÓSTICO POR SÍNTOMA ============
+const DIAGNOSTICOS = {
+  llaves: {
+    etiqueta:'Llaves & Seguridad',
+    titulo:'Apertura sin daños y reposición de llaves',
+    desc:'Abrimos tu vehículo sin dañarlo y, si las llaves se perdieron por completo, generamos y programamos una llave nueva desde cero (pérdida total). Si tu vehículo no puede moverse, vamos hasta donde estés.',
+    cta:'Resolver mi problema de llaves', msg:'Hola CODEX 🔑 Perdí mis llaves / quedaron dentro del vehículo. Mi vehículo es (marca, modelo y año): '
+  },
+  arranque: {
+    etiqueta:'Electricidad Automotriz',
+    titulo:'Diagnóstico de arranque: motor de arranque, batería o inmovilizador',
+    desc:'Que no arranque puede ser eléctrico (arranque, alternador, batería) o electrónico (inmovilizador, llave no reconocida, módulo). Lo diagnosticamos con equipos computarizados y vamos directo a la causa, sin cambiar piezas a ciegas.',
+    cta:'Consultar mi caso', msg:'Hola CODEX ⚡ Mi auto no arranca. Mi vehículo es (marca, modelo y año): '
+  },
+  bateria: {
+    etiqueta:'Electricidad Automotriz',
+    titulo:'Consumo de corriente: encontramos la fuga',
+    desc:'Si la batería amanece descargada, algo consume corriente cuando el auto está apagado. Hacemos la medición de fuga y rastreamos el circuito exacto: módulos que no duermen, cableado, accesorios mal instalados.',
+    cta:'Consultar mi caso', msg:'Hola CODEX 🪫 La batería de mi auto se descarga sola. Mi vehículo es (marca, modelo y año): '
+  },
+  testigo: {
+    etiqueta:'Electrónica y Diagnóstico Avanzado',
+    titulo:'Escaneo computarizado de ABS, Airbag, TPMS y más',
+    desc:'Un testigo encendido es el vehículo avisando una falla registrada. Escaneamos todos los sistemas, leemos los códigos y reparamos la causa — incluyendo módulos y reseteo de sistemas.',
+    cta:'Agendar un escaneo', msg:'Hola CODEX ⚠️ Tengo un testigo encendido en el tablero (airbag / ABS / otro). Mi vehículo es (marca, modelo y año): '
+  },
+  copia: {
+    etiqueta:'Llaves & Seguridad',
+    titulo:'Copias codificadas y duplicados con chip',
+    desc:'Hacemos copias de llaves con chip transponder, smart keys y controles remotos, programadas para tu vehículo. Tener una copia de respaldo cuesta mucho menos que una pérdida total.',
+    cta:'Cotizar mi copia', msg:'Hola CODEX 📋 Quiero una copia de llave con chip. Mi vehículo es (marca, modelo y año): '
+  },
+  electronica: {
+    etiqueta:'Electrónica y Sistemas Especiales',
+    titulo:'Módulos, ECU, ADAS y configuraciones electrónicas',
+    desc:'Reparamos y programamos ECU/ECM, enlazamos módulos, diagnosticamos sistemas ADAS y configuramos funciones y accesorios. Electrónica de fondo, no parches.',
+    cta:'Describir mi falla', msg:'Hola CODEX 💻 Tengo una falla electrónica / de módulos. Mi vehículo es (marca, modelo y año): '
+  }
+};
+const panelDiag = document.getElementById('panel-diagnostico');
+document.querySelectorAll('.sintoma').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.sintoma').forEach(b => b.classList.remove('activo'));
+    btn.classList.add('activo');
+    const d = DIAGNOSTICOS[btn.dataset.sintoma];
+    panelDiag.innerHTML =
+      '<span class="etiqueta">' + d.etiqueta + '</span>' +
+      '<h3>' + d.titulo + '</h3>' +
+      '<p>' + d.desc + '</p>' +
+      '<a class="btn btn-naranja" target="_blank" rel="noopener noreferrer" href="' + waLink(d.msg) + '">' + d.cta + ' →</a>';
+    panelDiag.classList.add('visible');
+    panelDiag.scrollIntoView({behavior:'smooth', block:'nearest'});
+  });
+});
+
+// ============ COTIZADOR GUIADO ============
+const PASOS = [
+  { clave:'marca', titulo:'¿De qué marca es tu vehículo?',
+    opciones:['Toyota','Nissan','Suzuki','Hyundai','Kia','Chevrolet','Ford','Volkswagen','Otra'] },
+  { clave:'tipo', titulo:'¿Qué tipo de llave necesitás?',
+    opciones:['Llave con chip','Smart Key (proximidad)','Control remoto','Llave simple','No estoy seguro'] },
+  { clave:'situacion', titulo:'¿Cuál es tu situación?',
+    opciones:['Quiero una copia adicional','Perdí todas las llaves','Reparar mi llave o control','Apertura del vehículo'] }
+];
+const estado = { marca:null, tipo:null, situacion:null, marcaOtra:'' };
+let pasoActual = 0;
+const cuerpo = document.getElementById('cotizador-cuerpo');
+const progreso = document.getElementById('cotizador-progreso');
+
+function pintarPaso(){
+  const total = PASOS.length + 1; // 3 pasos + resumen
+  progreso.style.width = ((pasoActual + 1) / total * 100) + '%';
+
+  if (pasoActual < PASOS.length){
+    const p = PASOS[pasoActual];
+    const elegido = estado[p.clave];
+    const puedeSeguir = elegido && !(p.clave==='marca' && elegido==='Otra' && !estado.marcaOtra);
+    cuerpo.innerHTML =
+      '<span class="paso-etiqueta">Paso ' + (pasoActual+1) + ' de 3</span>' +
+      '<h3>' + p.titulo + '</h3>' +
+      '<div class="opciones" role="group" aria-label="' + p.titulo + '">' +
+        p.opciones.map(o => '<button class="opcion' + (elegido===o?' elegida':'') + '" data-valor="' + o + '">' + o + '</button>').join('') +
+      '</div>' +
+      (p.clave==='marca'
+        ? '<div class="campo-otra' + (elegido==='Otra'?' visible':'') + '" id="campo-otra"><input type="text" id="input-otra" maxlength="40" autocomplete="off" autocapitalize="words" placeholder="Escribí la marca de tu vehículo" value="' + esc(estado.marcaOtra) + '" aria-label="Otra marca"></div>'
+        : '') +
+      '<div class="cotizador-pie">' +
+        (pasoActual>0 ? '<button class="btn-volver" id="btn-volver">← Volver</button>' : '<span></span>') +
+        '<button class="btn btn-naranja" id="btn-siguiente"' + (puedeSeguir?'':' disabled') + '>Siguiente →</button>' +
+      '</div>';
+
+    cuerpo.querySelectorAll('.opcion').forEach(b => {
+      b.addEventListener('click', () => {
+        estado[p.clave] = b.dataset.valor;
+        cuerpo.querySelectorAll('.opcion').forEach(x => x.classList.remove('elegida'));
+        b.classList.add('elegida');
+        const sig = document.getElementById('btn-siguiente');
+        sig.removeAttribute('disabled');
+        if (p.clave==='marca'){
+          const campo = document.getElementById('campo-otra');
+          const esOtra = b.dataset.valor==='Otra';
+          campo.classList.toggle('visible', esOtra);
+          if (esOtra){
+            document.getElementById('input-otra').focus();
+            if (!estado.marcaOtra) sig.setAttribute('disabled','');
+          }
+        }
+      });
+    });
+    const inputOtra = document.getElementById('input-otra');
+    if (inputOtra) inputOtra.addEventListener('input', e => {
+      estado.marcaOtra = e.target.value.trim();
+      if (estado.marca==='Otra'){
+        const sig = document.getElementById('btn-siguiente');
+        estado.marcaOtra ? sig.removeAttribute('disabled') : sig.setAttribute('disabled','');
+      }
+    });
+    const volver = document.getElementById('btn-volver');
+    if (volver) volver.addEventListener('click', () => { pasoActual--; pintarPaso(); });
+    document.getElementById('btn-siguiente').addEventListener('click', () => {
+      if (!estado[p.clave]) return;
+      if (p.clave==='marca' && estado.marca==='Otra' && !estado.marcaOtra) return;
+      pasoActual++; pintarPaso();
+    });
+  } else {
+    // Resumen final
+    const marcaFinal = estado.marca==='Otra' && estado.marcaOtra ? estado.marcaOtra : estado.marca;
+    const msg = 'Hola CODEX 🔑 Quiero cotizar una llave.\n• Vehículo: ' + marcaFinal + '\n• Tipo de llave: ' + estado.tipo + '\n• Situación: ' + estado.situacion + '\nQuedo atento, ¡gracias!';
+    cuerpo.innerHTML =
+      '<span class="paso-etiqueta">Listo — revisá tu consulta</span>' +
+      '<h3>Tu cotización está armada</h3>' +
+      '<dl class="resumen">' +
+        '<dt>Vehículo</dt><dd>' + esc(marcaFinal) + '</dd>' +
+        '<dt>Tipo de llave</dt><dd>' + esc(estado.tipo) + '</dd>' +
+        '<dt>Situación</dt><dd>' + esc(estado.situacion) + '</dd>' +
+      '</dl>' +
+      '<div class="cotizador-pie">' +
+        '<button class="btn-volver" id="btn-volver">← Corregir</button>' +
+        '<a class="btn btn-wa" target="_blank" rel="noopener noreferrer" href="' + waLink(msg) + '">Enviar por WhatsApp</a>' +
+      '</div>' +
+      '<p class="nota-cotizador">Se abre tu WhatsApp con el mensaje listo — solo tocá enviar. Te respondemos con el precio y el tiempo estimado.</p>';
+    document.getElementById('btn-volver').addEventListener('click', () => { pasoActual = PASOS.length - 1; pintarPaso(); });
+    // anti doble-clic: "Siguiente" del paso 3 ocupaba esta misma zona; se inhibe el enlace durante la transición
+    const waEnviar = cuerpo.querySelector('.btn-wa');
+    waEnviar.style.pointerEvents = 'none';
+    setTimeout(() => { waEnviar.style.pointerEvents = ''; }, 350);
+  }
+  // micro-transición al cambiar de paso
+  cuerpo.classList.remove('paso-anim');
+  void cuerpo.offsetWidth;
+  cuerpo.classList.add('paso-anim');
+}
+pintarPaso();
+</script>
+</body>
+</html>
