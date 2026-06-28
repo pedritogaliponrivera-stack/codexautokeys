@@ -153,7 +153,6 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
   font-weight:700;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;
   color:var(--naranja);margin-bottom:var(--s2);
 }
-.kicker::before{content:"";width:28px;height:3px;background:var(--naranja);transform:skewX(-20deg)}
 .sub{color:var(--gris);max-width:62ch}
 
 /* ============ HEADER ============ */
@@ -246,7 +245,6 @@ button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
 @media (max-width:880px){.emergencia .container{grid-template-columns:1fr}}
 .emergencia h2{font-size:clamp(1.9rem,4.5vw,3rem)}
 .emergencia .kicker{color:var(--tinta-naranja)}
-.emergencia .kicker::before{background:var(--tinta-naranja)}
 .emergencia p{margin-top:var(--s2);color:var(--tinta-naranja);max-width:50ch}
 .emergencia-acciones{display:flex;flex-direction:column;gap:var(--s2)}
 .emergencia-acciones .btn{padding:20px 28px;font-size:1.05rem}
@@ -792,13 +790,8 @@ html{scrollbar-color:#36363c var(--negro)}
           <small>Cotizaciones, turnos y consultas generales</small>
         </div>
         <div class="dato-contacto">
-          <span class="etiqueta"><svg class="ico" aria-hidden="true"><use href="#i-telefono"/></svg>Emergencias y pérdida total</span>
-          <p><a href="tel:+59178080115">780 80 115</a></p>
-          <small>Si tu vehículo no puede moverse, vamos hasta donde estés</small>
-        </div>
-        <div class="dato-contacto">
           <span class="etiqueta"><svg class="ico" aria-hidden="true"><use href="#i-reloj"/></svg>Horario del taller</span>
-          <p>Lun a Vie: 8:00–17:00 · Sáb: 8:30–13:00 · Dom: cerrado</p>
+          <p>Lun a Vie: 8:00–17:00<br>Sáb: 8:30–13:00<br>Dom: cerrado</p>
           <small>Los horarios pueden variar — fuera de horario, escribinos por WhatsApp</small>
         </div>
         <a class="btn btn-wa" href="#" data-wa="Hola CODEX, quiero hacer una consulta."><svg class="ico ico-fill" aria-hidden="true"><use href="#i-wa"/></svg>Escribinos por WhatsApp</a>
